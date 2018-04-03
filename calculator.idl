@@ -1,0 +1,42 @@
+/**
+ * Copyright (c) 2017 The Bacardi Authors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+ enum OperationType {
+  "add",
+  "sub",
+  "mul",
+  "div"
+};
+
+[
+  Constructor(),
+  Constructor(long createdTime),
+  Constructor(long arg1, long arg2),
+  Constructor(string msg1, string msg2)
+]
+interface Calculator {
+  static void print(string message);
+  long add(long number1, long number2);
+  short sub(short number1, short number2);
+  double mul(double number1, double number2);
+  double div(double number1, double number2);
+  bool isEquals(short number1, short number2);
+  double calculate(OperationType type, double number1, double number2);
+};
+
+interface TernaryCalculator {
+  long add(long number1, long number2, long number3);
+};
