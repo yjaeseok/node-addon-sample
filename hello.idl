@@ -1,8 +1,0 @@
-[
-	Constructor()
-]
-
-interface Hello {
-	static void print(string message);
-}
-
